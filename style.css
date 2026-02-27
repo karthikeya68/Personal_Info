@@ -1,39 +1,22 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    min-height: 100vh;
-}
-
-/* Animated background */
-body::before {
-    content: "";
-    position: fixed;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 30% 30%, rgba(0,255,255,0.2), transparent),
-                radial-gradient(circle at 70% 70%, rgba(255,0,255,0.2), transparent);
-    animation: moveBg 10s infinite alternate;
-    z-index: -1;
-}
-
-@keyframes moveBg {
-    from { transform: translate(-10%, -10%); }
-    to { transform: translate(10%, 10%); }
+    background: #000;
+    color: #fff;
 }
 
 /* Navbar */
+
 nav {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
+    background: #111;
+    border-bottom: 2px solid #1db954;
 }
 
 nav h2 {
-    color: cyan;
+    color: #1db954;
 }
 
 nav ul {
@@ -48,17 +31,18 @@ nav li {
 }
 
 nav li:hover {
-    color: cyan;
-    transform: scale(1.1);
+    color: #1db954;
 }
 
 /* Container */
+
 .container {
     padding: 60px 20px;
     text-align: center;
 }
 
 /* Tabs */
+
 .tab {
     display: none;
 }
@@ -67,25 +51,26 @@ nav li:hover {
     display: block;
 }
 
-/* Glass effect */
+/* Glass card */
+
 .glass {
-    background: rgba(255,255,255,0.08);
+    background: #111;
     padding: 30px;
     border-radius: 15px;
-    backdrop-filter: blur(15px);
     margin: 20px auto;
     width: 80%;
-    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    box-shadow: 0 0 20px rgba(29,185,84,0.3);
 }
 
 /* Button */
+
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    background: linear-gradient(45deg, cyan, blue);
+    background: #1db954;
     border-radius: 8px;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     margin-top: 20px;
     transition: 0.3s;
 }
@@ -95,27 +80,14 @@ nav li:hover {
 }
 
 /* Skills */
+
 .skill {
-    margin: 20px;
+    margin: 15px;
+    font-size: 18px;
 }
 
-.bar {
-    background: #222;
-    border-radius: 10px;
-    overflow: hidden;
-}
+/* Project Cards */
 
-.bar div {
-    height: 10px;
-    background: linear-gradient(90deg, cyan, purple);
-    animation: load 2s;
-}
-
-@keyframes load {
-    from { width: 0 }
-}
-
-/* Cards */
 .card-container {
     display: flex;
     justify-content: center;
@@ -124,34 +96,42 @@ nav li:hover {
 }
 
 .card {
-    background: rgba(0,255,255,0.1);
+    background: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
     width: 250px;
+    cursor: pointer;
     transition: 0.4s;
 }
 
 .card:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px cyan;
+    box-shadow: 0 0 20px #1db954;
 }
 
-/* Certifications */
-.cert {
-    list-style: none;
-    padding: 0;
-}
+/* Project details */
 
-.cert li {
-    margin: 10px;
+.project-details {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #1db954;
+    border-radius: 10px;
 }
 
 /* Contact */
+
+.contact-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #1db954;
+}
+
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 input, textarea {
@@ -162,7 +142,8 @@ input, textarea {
 
 button {
     padding: 10px;
-    background: cyan;
+    background: #1db954;
     border: none;
     cursor: pointer;
+    color: white;
 }
