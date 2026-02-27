@@ -1,123 +1,17 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
+function openModal(file) {
+
+    const modal = document.getElementById("modal");
+    const frame = document.getElementById("modalFrame");
+
+    frame.src = file;
+    modal.style.display = "block";
 }
 
-/* NAVBAR */
+function closeModal() {
 
-nav {
-    background: #111;
-    width: 100%;
-}
+    const modal = document.getElementById("modal");
+    const frame = document.getElementById("modalFrame");
 
-.nav-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-}
-
-.nav-container a {
-    color: #1db954;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.resume-btn {
-    border: 1px solid #1db954;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-/* SECTIONS */
-
-.section {
-    min-height: 100vh;
-    padding: 60px;
-}
-
-/* MOVING NAME */
-
-.moving-name {
-    font-size: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    animation: moveText 8s linear infinite;
-}
-
-@keyframes moveText {
-    0% { left: 100%; }
-    100% { left: -100%; }
-}
-
-/* SKILLS */
-
-.skill {
-    margin: 10px 0;
-}
-
-/* CERTIFICATES */
-
-.cert-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cert-card {
-    background: #111;
-    padding: 20px;
-    border: 1px solid #1db954;
-    border-radius: 10px;
-    width: 220px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.cert-card:hover {
-    transform: scale(1.05);
-}
-
-.cert-card p {
-    font-size: 14px;
-    text-transform: lowercase;
-}
-
-button {
-    background: #1db954;
-    border: none;
-    padding: 8px 15px;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* MODAL */
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-}
-
-.modal iframe {
-    width: 80%;
-    height: 80%;
-    margin: 5% 10%;
-    border: none;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    cursor: pointer;
+    frame.src = "";
+    modal.style.display = "none";
 }
