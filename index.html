@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthikeya Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthikeya Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -12,7 +14,7 @@
 <div id="bg"></div>
 
 <nav>
-    <h2>Karthikeya 🚀</h2>
+    <h2>🚀 Karthikeya</h2>
     <ul>
         <li onclick="showTab('home')">Home</li>
         <li onclick="showTab('about')">About</li>
@@ -25,74 +27,105 @@
 
 <div class="container">
 
-    <!-- HOME -->
-    <section id="home" class="tab active">
-        <h1>Hello, I'm Gundra Kedara Karthikeya 🚀</h1>
-        <p>AWS & DevOps Enthusiast | AI/ML Student</p>
-    </section>
+<!-- HOME -->
+<section id="home" class="tab active glass">
+    <h1>Gundra Kedara Karthikeya</h1>
+    <p>AWS & DevOps Enthusiast | AI/ML Student</p>
 
-    <!-- ABOUT -->
-    <section id="about" class="tab">
-        <h2>About Me</h2>
-        <p>
-            B.Tech Artificial Intelligence and Machine Learning student with
-            hands-on experience in Cloud Computing, DevOps, and Automation.
-            Skilled in CI/CD pipelines, containerization, and AWS deployment.
-        </p>
-    </section>
+    <a href="resume.pdf" download class="btn">⬇ Download Resume</a>
+</section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="tab">
-        <h2>Skills</h2>
-        <div class="card-container">
-            <div class="card">AWS (EC2, S3, IAM, RDS)</div>
-            <div class="card">Docker & Jenkins</div>
-            <div class="card">Terraform & Ansible</div>
-            <div class="card">Python & Java</div>
-            <div class="card">Linux & Bash</div>
+<!-- ABOUT -->
+<section id="about" class="tab glass">
+    <h2>About Me</h2>
+    <p>
+        B.Tech 3rd-year AI & ML student with strong hands-on experience in 
+        Cloud Computing, DevOps, and Automation. Skilled in AWS, Docker,
+        Jenkins, Terraform, and Ansible with experience in CI/CD pipelines
+        and cloud deployment.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="tab glass">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>AWS</p>
+        <div class="bar"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Docker & Jenkins</p>
+        <div class="bar"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Python</p>
+        <div class="bar"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Terraform & Ansible</p>
+        <div class="bar"><div style="width:75%"></div></div>
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="tab glass">
+    <h2>Projects</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Multi-Cloud Disaster Recovery</h3>
+            <p>AWS & Google Cloud backup architecture for fault tolerance.</p>
         </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="tab">
-        <h2>Projects</h2>
-        <div class="card-container">
-
-            <div class="card">
-                Multi-Cloud Disaster Recovery<br>
-                AWS + Google Cloud
-            </div>
-
-            <div class="card">
-                AI Dog Breed Detection<br>
-                Amazon Rekognition
-            </div>
-
-            <div class="card">
-                AI Chatbot for Hospital Booking<br>
-                Amazon Lex
-            </div>
-
+        <div class="card">
+            <h3>Dog Breed Detection</h3>
+            <p>AI model using Amazon Rekognition.</p>
         </div>
-    </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="tab">
-        <h2>Certifications</h2>
-        <div class="card-container">
-            <div class="card">AWS Academy Graduate</div>
-            <div class="card">Red Hat Certified Enterprise</div>
-            <div class="card">ServiceNow CSA</div>
+        <div class="card">
+            <h3>AI Hospital Chatbot</h3>
+            <p>Chatbot built with Amazon Lex.</p>
         </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="tab">
-        <h2>Contact</h2>
-        <p>Email: karthikeya0631@gmail.com</p>
-        <p>Phone: 9390808092</p>
-        <p>GitHub: github.com/karthikeya68</p>
-    </section>
+    </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="tab glass">
+    <h2>Certifications</h2>
+
+    <ul class="cert">
+        <li>AWS AI Practitioner</li>
+        <li>Docker Foundations</li>
+        <li>Java Programming – Oracle</li>
+        <li>Python – Infosys</li>
+        <li>C Programming – Cisco</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="tab glass">
+    <h2>Contact Me</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <p>Email: karthikeya0631@gmail.com</p>
+    <p>Phone: 9390808092</p>
+    <p>GitHub: github.com/karthikeya68</p>
+
+</section>
 
 </div>
 
