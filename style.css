@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background: black;
+}
+
+#bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+header {
+    padding: 100px 20px;
+}
+
+section {
+    padding: 50px 20px;
+}
