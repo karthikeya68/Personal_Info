@@ -16,107 +16,141 @@
         <a href="#projects">Projects</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
-
-        <!-- Resume Download -->
         <a href="resume.pdf" download class="resume-btn">Download Resume</a>
     </div>
 </nav>
 
 <!-- HOME -->
-<section id="home" class="section">
-    <h1>Gundra Kedara Karthikeya</h1>
+<section id="home" class="section home">
+
+    <h1 class="moving-name">Gundra Kedara Karthikeya</h1>
+
     <p>Cloud & DevOps Enthusiast | AI & ML Student</p>
+
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
+
     <h2>About Me</h2>
+
     <p>
-        I am a B.Tech 3rd-year Artificial Intelligence and Machine Learning student with strong
-        hands-on experience in Cloud Computing, DevOps, and Automation. I specialize in designing
-        scalable cloud infrastructure using AWS and modern DevOps tools.
+        I am a passionate B.Tech 3rd-year Artificial Intelligence and Machine Learning student 
+        with strong hands-on experience in Cloud Computing, DevOps, and Automation.
+        I specialize in designing, deploying, and automating scalable cloud infrastructure 
+        on AWS and Google Cloud using modern DevOps tools such as Docker, Jenkins, 
+        Terraform, and Ansible.
     </p>
+
+    <p>
+        I have practical experience in CI/CD pipelines, containerized applications, 
+        infrastructure as code, and cloud reliability practices. I enjoy solving 
+        real-world problems through automation and AI-driven solutions.
+    </p>
+
+    <p>
+        Currently, I am actively seeking Cloud and DevOps internship opportunities 
+        where I can apply my skills to build scalable, secure, and reliable systems.
+    </p>
+
+    <h3>Education</h3>
+    <p>
+        B.Tech — Artificial Intelligence and Machine Learning  
+        Aditya College Of Engineering And Technology  
+        GPA: 7.84 / 10
+    </p>
+
 </section>
 
 <!-- SKILLS -->
 <section id="skills" class="section">
+
     <h2>Skills</h2>
 
-    <div class="skill">
-        AWS ⭐⭐⭐⭐⭐
-    </div>
-    <div class="skill">
-        Docker ⭐⭐⭐⭐
-    </div>
-    <div class="skill">
-        Jenkins ⭐⭐⭐⭐
-    </div>
-    <div class="skill">
-        Python ⭐⭐⭐⭐
-    </div>
+    <div class="skill">AWS ⭐⭐⭐⭐⭐</div>
+    <div class="skill">Docker ⭐⭐⭐⭐</div>
+    <div class="skill">Jenkins ⭐⭐⭐⭐</div>
+    <div class="skill">Terraform ⭐⭐⭐⭐</div>
+    <div class="skill">Python ⭐⭐⭐⭐</div>
+
 </section>
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
+
     <h2>Projects</h2>
 
     <div class="project">
         <h3>AI Chatbot for Hospital Booking</h3>
-        <p>Built using AWS Lex with intelligent recommendations.</p>
+        <p>
+            Developed an AI-based chatbot for booking hospital appointments and 
+            providing symptom-based suggestions using AWS Lex.
+        </p>
     </div>
 
     <div class="project">
-        <h3>Multi Cloud Disaster Recovery</h3>
-        <p>AWS + Google Cloud architecture for fault tolerance.</p>
+        <h3>Multi-Cloud Disaster Recovery</h3>
+        <p>
+            Implemented AWS and Google Cloud architecture to ensure data availability 
+            and automatic backup in case of failures.
+        </p>
     </div>
 
 </section>
 
 <!-- CERTIFICATES -->
 <section id="certificates" class="section">
+
     <h2>Certificates</h2>
 
     <div class="cert-container">
 
         <div class="cert-card">
             <p>oracle java foundations associate</p>
-            <button onclick="openModal('cert1')">View</button>
+            <button onclick="openModal('oracle.pdf')">View</button>
         </div>
 
         <div class="cert-card">
             <p>getting started with artificial intelligence</p>
-            <button onclick="openModal('cert2')">View</button>
+            <button onclick="openModal('ibm.pdf')">View</button>
         </div>
 
         <div class="cert-card">
             <p>aws ai practitioner</p>
-            <button onclick="openModal('cert3')">View</button>
+            <button onclick="openModal('aws.pdf')">View</button>
         </div>
 
         <div class="cert-card">
             <p>devops infrastructure as code</p>
-            <button onclick="openModal('cert4')">View</button>
+            <button onclick="openModal('devops.pdf')">View</button>
         </div>
 
         <div class="cert-card">
             <p>learning docker</p>
-            <button onclick="openModal('cert5')">View</button>
+            <button onclick="openModal('docker.pdf')">View</button>
         </div>
 
     </div>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="section">
+
     <h2>Contact</h2>
+
     <p>Email: karthikeya0631@gmail.com</p>
     <p>Phone: 9390808092</p>
+
 </section>
 
 <!-- MODAL -->
 <div id="modal" class="modal">
+
     <span class="close" onclick="closeModal()">×</span>
+
     <iframe id="modalFrame"></iframe>
+
 </div>
 
 <script src="script.js"></script>
