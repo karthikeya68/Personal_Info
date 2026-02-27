@@ -1,112 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Karthikeya Portfolio</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Karthikeya Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <nav>
-    <h2>🟢 Karthikeya</h2>
-    <ul>
-        <li onclick="showTab('home')">Home</li>
-        <li onclick="showTab('about')">About</li>
-        <li onclick="showTab('skills')">Skills</li>
-        <li onclick="showTab('projects')">Projects</li>
-        <li onclick="showTab('contact')">Contact</li>
-    </ul>
+    <div class="nav-container">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Resume Download -->
+        <a href="resume.pdf" download class="resume-btn">Download Resume</a>
+    </div>
 </nav>
 
-<div class="container">
-
 <!-- HOME -->
-<section id="home" class="tab active glass">
+<section id="home" class="section">
     <h1>Gundra Kedara Karthikeya</h1>
-    <p>AWS & DevOps Enthusiast | AI/ML Student</p>
-
-    <a href="resume.pdf" download class="btn">⬇ Download Resume</a>
+    <p>Cloud & DevOps Enthusiast | AI & ML Student</p>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="tab glass">
+<section id="about" class="section">
     <h2>About Me</h2>
     <p>
-        I am a passionate B.Tech Artificial Intelligence and Machine Learning student
-        with strong practical experience in Cloud Computing, DevOps, and Automation.
-        I enjoy designing scalable cloud architectures and implementing automation
-        solutions using modern tools like Docker, Jenkins, Terraform, and Ansible.
-    </p>
-
-    <p>
-        I have worked on multiple projects involving AWS services, AI integration,
-        and CI/CD pipelines, which strengthened my problem-solving and system design
-        abilities. My goal is to become a Cloud & DevOps Engineer and contribute to
-        building reliable and efficient infrastructure systems.
+        I am a B.Tech 3rd-year Artificial Intelligence and Machine Learning student with strong
+        hands-on experience in Cloud Computing, DevOps, and Automation. I specialize in designing
+        scalable cloud infrastructure using AWS and modern DevOps tools.
     </p>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="tab glass">
+<section id="skills" class="section">
     <h2>Skills</h2>
 
-    <div class="skill">AWS ⭐⭐⭐⭐⭐</div>
-    <div class="skill">Docker ⭐⭐⭐⭐</div>
-    <div class="skill">Jenkins ⭐⭐⭐⭐</div>
-    <div class="skill">Python ⭐⭐⭐⭐</div>
-    <div class="skill">Terraform ⭐⭐⭐</div>
-    <div class="skill">Ansible ⭐⭐⭐</div>
-
+    <div class="skill">
+        AWS ⭐⭐⭐⭐⭐
+    </div>
+    <div class="skill">
+        Docker ⭐⭐⭐⭐
+    </div>
+    <div class="skill">
+        Jenkins ⭐⭐⭐⭐
+    </div>
+    <div class="skill">
+        Python ⭐⭐⭐⭐
+    </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="tab glass">
+<section id="projects" class="section">
     <h2>Projects</h2>
 
-    <div class="card-container">
+    <div class="project">
+        <h3>AI Chatbot for Hospital Booking</h3>
+        <p>Built using AWS Lex with intelligent recommendations.</p>
+    </div>
 
-        <div class="card" onclick="openProject('p1')">
-            Multi-Cloud Disaster Recovery
+    <div class="project">
+        <h3>Multi Cloud Disaster Recovery</h3>
+        <p>AWS + Google Cloud architecture for fault tolerance.</p>
+    </div>
+
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="section">
+    <h2>Certificates</h2>
+
+    <div class="cert-container">
+
+        <div class="cert-card">
+            <p>oracle java foundations associate</p>
+            <button onclick="openModal('cert1')">View</button>
         </div>
 
-        <div class="card" onclick="openProject('p2')">
-            Dog Breed Detection
+        <div class="cert-card">
+            <p>getting started with artificial intelligence</p>
+            <button onclick="openModal('cert2')">View</button>
         </div>
 
-        <div class="card" onclick="openProject('p3')">
-            AI Hospital Chatbot
+        <div class="cert-card">
+            <p>aws ai practitioner</p>
+            <button onclick="openModal('cert3')">View</button>
+        </div>
+
+        <div class="cert-card">
+            <p>devops infrastructure as code</p>
+            <button onclick="openModal('cert4')">View</button>
+        </div>
+
+        <div class="cert-card">
+            <p>learning docker</p>
+            <button onclick="openModal('cert5')">View</button>
         </div>
 
     </div>
-
-    <!-- Project Details -->
-    <div id="projectDetails" class="project-details"></div>
-
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="tab glass">
-    <h2>Contact Me</h2>
-
-    <div class="contact-box">
-
-        <p>📧 Email: karthikeya0631@gmail.com</p>
-        <p>📱 Phone: 9390808092</p>
-        <p>💻 GitHub: github.com/karthikeya68</p>
-
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-
-    </div>
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: karthikeya0631@gmail.com</p>
+    <p>Phone: 9390808092</p>
 </section>
 
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <iframe id="modalFrame"></iframe>
 </div>
 
 <script src="script.js"></script>
