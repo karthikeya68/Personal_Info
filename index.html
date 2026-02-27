@@ -14,71 +14,87 @@
 <nav>
     <h2>Karthikeya 🚀</h2>
     <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li onclick="showTab('home')">Home</li>
+        <li onclick="showTab('about')">About</li>
+        <li onclick="showTab('skills')">Skills</li>
+        <li onclick="showTab('projects')">Projects</li>
+        <li onclick="showTab('certifications')">Certifications</li>
+        <li onclick="showTab('contact')">Contact</li>
     </ul>
 </nav>
 
-<header>
-    <h1>Hello, I'm Gundra Kedara Karthikeya</h1>
-    <p>AWS & DevOps Enthusiast | AI/ML Student</p>
-    <button onclick="scrollToSection()">Explore</button>
-</header>
+<div class="container">
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        B.Tech Artificial Intelligence and Machine Learning student with strong
-        hands-on experience in Cloud Computing, DevOps, and Automation.
-        Experienced in CI/CD pipelines, containerized applications, and AWS cloud deployment.
-    </p>
-</section>
+    <!-- HOME -->
+    <section id="home" class="tab active">
+        <h1>Hello, I'm Gundra Kedara Karthikeya 🚀</h1>
+        <p>AWS & DevOps Enthusiast | AI/ML Student</p>
+    </section>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <div class="card-container">
-        <div class="card">AWS (EC2, S3, IAM, RDS)</div>
-        <div class="card">Docker & Jenkins</div>
-        <div class="card">Terraform & Ansible</div>
-        <div class="card">Python & Java</div>
-        <div class="card">Linux & Bash</div>
-    </div>
-</section>
+    <!-- ABOUT -->
+    <section id="about" class="tab">
+        <h2>About Me</h2>
+        <p>
+            B.Tech Artificial Intelligence and Machine Learning student with
+            hands-on experience in Cloud Computing, DevOps, and Automation.
+            Skilled in CI/CD pipelines, containerization, and AWS deployment.
+        </p>
+    </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="card-container">
-
-        <div class="card">
-            Multi-Cloud Disaster Recovery<br>
-            AWS + Google Cloud
+    <!-- SKILLS -->
+    <section id="skills" class="tab">
+        <h2>Skills</h2>
+        <div class="card-container">
+            <div class="card">AWS (EC2, S3, IAM, RDS)</div>
+            <div class="card">Docker & Jenkins</div>
+            <div class="card">Terraform & Ansible</div>
+            <div class="card">Python & Java</div>
+            <div class="card">Linux & Bash</div>
         </div>
+    </section>
 
-        <div class="card">
-            AI Dog Breed Detection<br>
-            Amazon Rekognition
+    <!-- PROJECTS -->
+    <section id="projects" class="tab">
+        <h2>Projects</h2>
+        <div class="card-container">
+
+            <div class="card">
+                Multi-Cloud Disaster Recovery<br>
+                AWS + Google Cloud
+            </div>
+
+            <div class="card">
+                AI Dog Breed Detection<br>
+                Amazon Rekognition
+            </div>
+
+            <div class="card">
+                AI Chatbot for Hospital Booking<br>
+                Amazon Lex
+            </div>
+
         </div>
+    </section>
 
-        <div class="card">
-            AI Chatbot for Hospital Booking<br>
-            Amazon Lex
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="tab">
+        <h2>Certifications</h2>
+        <div class="card-container">
+            <div class="card">AWS Academy Graduate</div>
+            <div class="card">Red Hat Certified Enterprise</div>
+            <div class="card">ServiceNow CSA</div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- CONTACT -->
+    <section id="contact" class="tab">
+        <h2>Contact</h2>
+        <p>Email: karthikeya0631@gmail.com</p>
+        <p>Phone: 9390808092</p>
+        <p>GitHub: github.com/karthikeya68</p>
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: karthikeya0631@gmail.com</p>
-    <p>Phone: 9390808092</p>
-    <p>GitHub: github.com/karthikeya68</p>
-</section>
-
-<footer>
-    <p>© 2026 Karthikeya | DevOps Portfolio</p>
-</footer>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="script.js"></script>
