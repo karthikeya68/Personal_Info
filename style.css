@@ -1,8 +1,7 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     color: white;
-    text-align: center;
     background: black;
 }
 
@@ -13,10 +12,62 @@ body {
     z-index: -1;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
 header {
-    padding: 100px 20px;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #00ffcc;
+    border: none;
+    cursor: pointer;
 }
 
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    background: rgba(0,255,204,0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
 }
