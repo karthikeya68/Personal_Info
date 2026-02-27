@@ -1,9 +1,11 @@
-function scrollToSection() {
-    window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-    });
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
 }
+
+/* 3D Background */
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
