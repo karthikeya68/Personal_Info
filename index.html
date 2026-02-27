@@ -3,42 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gundra Kedara Karthikeya Portfolio</title>
+    <title>Karthikeya Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div id="bg"></div>
 
+<nav>
+    <h2>Karthikeya 🚀</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <header>
-    <h1>Hello, I'm Gundra Kedara Karthikeya 🚀</h1>
-    <p>AWS & DevOps Enthusiast | BTech Student</p>
+    <h1>Hello, I'm Gundra Kedara Karthikeya</h1>
+    <p>AWS & DevOps Enthusiast | AI/ML Student</p>
+    <button onclick="scrollToSection()">Explore</button>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
-    <p>I am a BTech student passionate about Cloud Computing, AWS, and DevOps.
-       I have deployed applications using Jenkins CI/CD pipelines on AWS.</p>
+    <p>
+        B.Tech Artificial Intelligence and Machine Learning student with strong
+        hands-on experience in Cloud Computing, DevOps, and Automation.
+        Experienced in CI/CD pipelines, containerized applications, and AWS cloud deployment.
+    </p>
 </section>
 
-<section>
+<section id="skills">
     <h2>Skills</h2>
-    <ul>
-        <li>AWS (EC2, S3, IAM)</li>
-        <li>Docker</li>
-        <li>Jenkins</li>
-        <li>Python</li>
-        <li>Linux</li>
-    </ul>
+    <div class="card-container">
+        <div class="card">AWS (EC2, S3, IAM, RDS)</div>
+        <div class="card">Docker & Jenkins</div>
+        <div class="card">Terraform & Ansible</div>
+        <div class="card">Python & Java</div>
+        <div class="card">Linux & Bash</div>
+    </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
-    <p>AI Powered Incident Root Cause Analyzer (AWS + DevOps)</p>
+    <div class="card-container">
+
+        <div class="card">
+            Multi-Cloud Disaster Recovery<br>
+            AWS + Google Cloud
+        </div>
+
+        <div class="card">
+            AI Dog Breed Detection<br>
+            Amazon Rekognition
+        </div>
+
+        <div class="card">
+            AI Chatbot for Hospital Booking<br>
+            Amazon Lex
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: karthikeya0631@gmail.com</p>
+    <p>Phone: 9390808092</p>
+    <p>GitHub: github.com/karthikeya68</p>
 </section>
 
 <footer>
-    <p>Contact: your-email@example.com</p>
+    <p>© 2026 Karthikeya | DevOps Portfolio</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
