@@ -1,149 +1,99 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #000;
-    color: #fff;
-}
-
-/* Navbar */
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: #111;
-    border-bottom: 2px solid #1db954;
-}
-
-nav h2 {
-    color: #1db954;
-}
-
-nav ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-nav li {
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-nav li:hover {
-    color: #1db954;
-}
-
-/* Container */
-
-.container {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Tabs */
-
-.tab {
-    display: none;
-}
-
-.tab.active {
-    display: block;
-}
-
-/* Glass card */
-
-.glass {
-    background: #111;
-    padding: 30px;
-    border-radius: 15px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0 0 20px rgba(29,185,84,0.3);
-}
-
-/* Button */
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #1db954;
-    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    background: black;
     color: white;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: 0.3s;
 }
 
-.btn:hover {
-    transform: scale(1.1);
+/* NAVBAR */
+nav {
+    background: #111;
+    width: 100%;
 }
 
-/* Skills */
-
-.skill {
-    margin: 15px;
-    font-size: 18px;
-}
-
-/* Project Cards */
-
-.card-container {
+.nav-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+}
+
+.nav-container a {
+    color: #1db954;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-btn {
+    border: 1px solid #1db954;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+.section {
+    min-height: 100vh;
+    padding: 60px;
+}
+
+/* SKILLS */
+.skill {
+    margin: 10px 0;
+}
+
+/* CERTIFICATES */
+.cert-container {
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #1db954;
-}
-
-/* Project details */
-
-.project-details {
-    margin-top: 30px;
+.cert-card {
+    background: #111;
     padding: 20px;
     border: 1px solid #1db954;
     border-radius: 10px;
+    text-align: center;
+    width: 200px;
 }
 
-/* Contact */
-
-.contact-box {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #1db954;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-input, textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
+.cert-card p {
+    font-size: 14px;
+    text-transform: lowercase;
 }
 
 button {
-    padding: 10px;
     background: #1db954;
     border: none;
+    padding: 8px 15px;
+    color: black;
     cursor: pointer;
-    color: white;
+    border-radius: 5px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+.modal iframe {
+    width: 80%;
+    height: 80%;
+    margin: 5% 10%;
+    border: none;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
 }
