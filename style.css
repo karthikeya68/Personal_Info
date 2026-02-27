@@ -16,7 +16,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
 }
 
 nav ul {
@@ -25,26 +25,26 @@ nav ul {
     gap: 20px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-header {
-    text-align: center;
-    padding: 120px 20px;
-}
-
-button {
-    padding: 10px 20px;
-    background: #00ffcc;
-    border: none;
+nav li {
     cursor: pointer;
+    transition: 0.3s;
 }
 
-section {
-    padding: 60px 20px;
+nav li:hover {
+    color: #00ffcc;
+}
+
+.container {
+    padding: 80px 20px;
     text-align: center;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
 }
 
 .card-container {
@@ -65,9 +65,4 @@ section {
 .card:hover {
     transform: scale(1.1);
     background: rgba(0,255,204,0.3);
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
 }
