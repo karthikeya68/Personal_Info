@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthikeya Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karthikeya Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-    <h2>🚀 Karthikeya</h2>
+    <h2>🟢 Karthikeya</h2>
     <ul>
         <li onclick="showTab('home')">Home</li>
         <li onclick="showTab('about')">About</li>
         <li onclick="showTab('skills')">Skills</li>
         <li onclick="showTab('projects')">Projects</li>
-        <li onclick="showTab('certifications')">Certifications</li>
         <li onclick="showTab('contact')">Contact</li>
     </ul>
 </nav>
@@ -28,7 +27,6 @@
 <section id="home" class="tab active glass">
     <h1>Gundra Kedara Karthikeya</h1>
     <p>AWS & DevOps Enthusiast | AI/ML Student</p>
-    <p>Kakinada | karthikeya0631@gmail.com | 9390808092</p>
 
     <a href="resume.pdf" download class="btn">⬇ Download Resume</a>
 </section>
@@ -37,10 +35,17 @@
 <section id="about" class="tab glass">
     <h2>About Me</h2>
     <p>
-        B.Tech 3rd-year Artificial Intelligence and Machine Learning student with
-        strong hands-on experience in Cloud Computing, DevOps, and Automation.
-        Skilled in AWS, Docker, Jenkins, Terraform, and Ansible with experience
-        in CI/CD pipelines and containerized applications.
+        I am a passionate B.Tech Artificial Intelligence and Machine Learning student
+        with strong practical experience in Cloud Computing, DevOps, and Automation.
+        I enjoy designing scalable cloud architectures and implementing automation
+        solutions using modern tools like Docker, Jenkins, Terraform, and Ansible.
+    </p>
+
+    <p>
+        I have worked on multiple projects involving AWS services, AI integration,
+        and CI/CD pipelines, which strengthened my problem-solving and system design
+        abilities. My goal is to become a Cloud & DevOps Engineer and contribute to
+        building reliable and efficient infrastructure systems.
     </p>
 </section>
 
@@ -48,25 +53,12 @@
 <section id="skills" class="tab glass">
     <h2>Skills</h2>
 
-    <div class="skill">
-        <p>AWS</p>
-        <div class="bar"><div style="width:90%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Docker & Jenkins</p>
-        <div class="bar"><div style="width:85%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Python</p>
-        <div class="bar"><div style="width:80%"></div></div>
-    </div>
-
-    <div class="skill">
-        <p>Terraform & Ansible</p>
-        <div class="bar"><div style="width:75%"></div></div>
-    </div>
+    <div class="skill">AWS ⭐⭐⭐⭐⭐</div>
+    <div class="skill">Docker ⭐⭐⭐⭐</div>
+    <div class="skill">Jenkins ⭐⭐⭐⭐</div>
+    <div class="skill">Python ⭐⭐⭐⭐</div>
+    <div class="skill">Terraform ⭐⭐⭐</div>
+    <div class="skill">Ansible ⭐⭐⭐</div>
 
 </section>
 
@@ -76,57 +68,47 @@
 
     <div class="card-container">
 
-        <div class="card">
-            <h3>Multi-Cloud Disaster Recovery</h3>
-            <p>AWS & Google Cloud backup architecture for fault tolerance.</p>
+        <div class="card" onclick="openProject('p1')">
+            Multi-Cloud Disaster Recovery
         </div>
 
-        <div class="card">
-            <h3>Dog Breed Detection</h3>
-            <p>AI model using Amazon Rekognition.</p>
+        <div class="card" onclick="openProject('p2')">
+            Dog Breed Detection
         </div>
 
-        <div class="card">
-            <h3>AI Hospital Chatbot</h3>
-            <p>Chatbot built with Amazon Lex.</p>
+        <div class="card" onclick="openProject('p3')">
+            AI Hospital Chatbot
         </div>
 
     </div>
-</section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications" class="tab glass">
-    <h2>Certifications</h2>
+    <!-- Project Details -->
+    <div id="projectDetails" class="project-details"></div>
 
-    <ul class="cert">
-        <li>AWS AI Practitioner</li>
-        <li>Docker Foundations</li>
-        <li>Java Programming – Oracle</li>
-        <li>Python – Infosys</li>
-        <li>C Programming – Cisco</li>
-    </ul>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="tab glass">
-    <h2>Contact</h2>
+    <h2>Contact Me</h2>
 
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
+    <div class="contact-box">
 
-    <p>Email: karthikeya0631@gmail.com</p>
-    <p>Phone: 9390808092</p>
-    <p>GitHub: github.com/karthikeya68</p>
+        <p>📧 Email: karthikeya0631@gmail.com</p>
+        <p>📱 Phone: 9390808092</p>
+        <p>💻 GitHub: github.com/karthikeya68</p>
 
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
 </section>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
