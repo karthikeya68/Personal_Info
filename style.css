@@ -6,6 +6,7 @@ body {
 }
 
 /* NAVBAR */
+
 nav {
     background: #111;
     width: 100%;
@@ -14,7 +15,6 @@ nav {
 .nav-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     padding: 15px;
 }
 
@@ -31,17 +31,35 @@ nav {
 }
 
 /* SECTIONS */
+
 .section {
     min-height: 100vh;
     padding: 60px;
 }
 
+/* MOVING NAME */
+
+.moving-name {
+    font-size: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: moveText 8s linear infinite;
+}
+
+@keyframes moveText {
+    0% { left: 100%; }
+    100% { left: -100%; }
+}
+
 /* SKILLS */
+
 .skill {
     margin: 10px 0;
 }
 
 /* CERTIFICATES */
+
 .cert-container {
     display: flex;
     gap: 20px;
@@ -53,8 +71,13 @@ nav {
     padding: 20px;
     border: 1px solid #1db954;
     border-radius: 10px;
+    width: 220px;
     text-align: center;
-    width: 200px;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
 }
 
 .cert-card p {
@@ -67,11 +90,12 @@ button {
     border: none;
     padding: 8px 15px;
     color: black;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* MODAL */
+
 .modal {
     display: none;
     position: fixed;
