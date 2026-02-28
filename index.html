@@ -33,7 +33,8 @@
         <div class="resume-box">
             <p class="resume-name">GK.Karthikeya Resume</p>
 
-            <a href="assets/resume.pdf" download="GK_Karthikeya_Resume.pdf"
+            <a href="assets/resume.pdf"
+               download="GK_Karthikeya_Resume.pdf"
                class="home-resume-btn">
                ⬇ Download Resume
             </a>
@@ -78,14 +79,28 @@
 
     <h2>Projects</h2>
 
-    <div class="card">
-        <h3>AI Chatbot for Hospital Booking</h3>
-        <p>Built using AWS Lex.</p>
-    </div>
+    <div class="card-container">
 
-    <div class="card">
-        <h3>Multi Cloud Disaster Recovery</h3>
-        <p>AWS + Google Cloud architecture.</p>
+        <div class="card">
+            <p>AI Chatbot for Hospital Booking</p>
+            <button onclick="openProject(
+                'AI Chatbot for Hospital Booking',
+                'Developed an AI-based chatbot for booking hospital appointments and providing symptom-based suggestions using AWS Lex. The system also recommends nearby hospitals.'
+            )">
+                See Full Info
+            </button>
+        </div>
+
+        <div class="card">
+            <p>Multi Cloud Disaster Recovery</p>
+            <button onclick="openProject(
+                'Multi Cloud Disaster Recovery',
+                'Designed a multi-cloud disaster recovery login architecture using AWS and Google Cloud to ensure data availability and automatic backup.'
+            )">
+                See Full Info
+            </button>
+        </div>
+
     </div>
 
 </section>
@@ -95,40 +110,40 @@
 
     <h2>Certificates</h2>
 
-    <div class="cert-container">
+    <div class="card-container">
 
-        <div class="cert-card">
-            <p>aws ai practitioner</p>
+        <div class="card">
+            <p>AWS AI Practitioner</p>
             <button onclick="openModal('assets/aws.pdf')">View</button>
         </div>
 
-        <div class="cert-card">
-            <p>artificial intelligence ibm</p>
+        <div class="card">
+            <p>Artificial Intelligence IBM</p>
             <button onclick="openModal('assets/ibm.pdf')">View</button>
         </div>
 
-        <div class="cert-card">
-            <p>devops infrastructure as code</p>
+        <div class="card">
+            <p>DevOps Infrastructure as Code</p>
             <button onclick="openModal('assets/devops.pdf')">View</button>
         </div>
 
-        <div class="cert-card">
-            <p>learning docker</p>
+        <div class="card">
+            <p>Learning Docker</p>
             <button onclick="openModal('assets/docker.pdf')">View</button>
         </div>
 
-        <div class="cert-card">
-            <p>java certification</p>
+        <div class="card">
+            <p>Java Certification</p>
             <button onclick="openModal('assets/java.pdf')">View</button>
         </div>
 
-        <div class="cert-card">
-            <p>python certification</p>
+        <div class="card">
+            <p>Python Certification</p>
             <button onclick="openModal('assets/python.pdf')">View</button>
         </div>
 
-        <div class="cert-card">
-            <p>generative ai</p>
+        <div class="card">
+            <p>Generative AI</p>
             <button onclick="openModal('assets/Generative_AI.pdf')">View</button>
         </div>
 
@@ -151,7 +166,7 @@
 
     <span class="close" onclick="closeModal()">×</span>
 
-    <iframe id="modalFrame"></iframe>
+    <div id="modalContent" class="modal-content"></div>
 
 </div>
 
