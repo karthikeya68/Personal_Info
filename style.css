@@ -5,7 +5,7 @@ body {
     background: radial-gradient(circle at top, #0f2027, #000000 70%);
 }
 
-/* Green Glow Background */
+/* Green Glow */
 
 body::before {
     content: "";
@@ -19,7 +19,7 @@ body::before {
     opacity: 0.2;
 }
 
-/* NAVBAR GLASS */
+/* NAVBAR */
 
 nav {
     position: fixed;
@@ -28,7 +28,6 @@ nav {
     backdrop-filter: blur(12px);
     background: rgba(0,0,0,0.6);
     border-bottom: 1px solid rgba(29,185,84,0.4);
-    z-index: 1000;
 }
 
 .nav-container {
@@ -41,27 +40,17 @@ nav {
     color: #1db954;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
 }
 
-.nav-container a:hover {
-    color: white;
-}
+/* HOME */
 
-.resume-btn {
-    border: 1px solid #1db954;
-    padding: 6px 12px;
-    border-radius: 6px;
-}
-
-/* SECTIONS */
-
-.section {
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     min-height: 100vh;
-    padding: 120px 60px;
 }
-
-/* NAME ANIMATION */
 
 .moving-name {
     font-size: 50px;
@@ -81,13 +70,28 @@ nav {
     color: #aaa;
 }
 
-/* SKILLS */
+/* Resume Button */
 
-.skill {
-    margin: 12px 0;
+.home-resume-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(45deg, #1db954, #00ffcc);
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(29,185,84,0.6);
 }
 
-/* CARDS */
+/* Sections */
+
+.section {
+    padding: 120px 60px;
+}
+
+/* Cards */
 
 .card {
     backdrop-filter: blur(15px);
@@ -98,7 +102,13 @@ nav {
     margin: 15px 0;
 }
 
-/* CERTIFICATES */
+/* Skills */
+
+.skill {
+    margin: 10px 0;
+}
+
+/* Certificates */
 
 .cert-container {
     display: flex;
@@ -112,19 +122,8 @@ nav {
     border: 1px solid rgba(29,185,84,0.3);
     border-radius: 15px;
     padding: 20px;
-    width: 230px;
+    width: 220px;
     text-align: center;
-    transition: 0.4s;
-}
-
-.cert-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 20px rgba(29,185,84,0.4);
-}
-
-.cert-card p {
-    font-size: 14px;
-    text-transform: lowercase;
 }
 
 button {
@@ -145,13 +144,11 @@ button {
     background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
-    z-index: 2000;
 }
 
 .modal iframe {
     width: 80%;
     height: 85%;
-    border-radius: 10px;
 }
 
 .close {
