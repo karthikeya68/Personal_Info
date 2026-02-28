@@ -5,7 +5,7 @@ body {
     background: radial-gradient(circle at top, #0f2027, #000000 70%);
 }
 
-/* Glow */
+/* Glow Background */
 
 body::before {
     content: "";
@@ -44,8 +44,6 @@ nav {
     font-weight: 600;
     position: relative;
 }
-
-/* Active Tab Highlight */
 
 .nav-link.active {
     color: white;
@@ -95,7 +93,7 @@ nav {
     color: #aaa;
 }
 
-/* Resume Box */
+/* Resume Section */
 
 .resume-box {
     margin-top: 30px;
@@ -111,8 +109,6 @@ nav {
     margin-bottom: 15px;
     color: #1db954;
 }
-
-/* Resume Button */
 
 .home-resume-btn {
     display: inline-block;
@@ -134,40 +130,21 @@ nav {
 
 /* Cards */
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .card {
     backdrop-filter: blur(15px);
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(29,185,84,0.3);
     border-radius: 15px;
     padding: 20px;
-    margin: 15px 0;
-}
-
-/* Skills */
-
-.skill {
-    margin: 10px 0;
-}
-
-/* Certificates */
-
-.cert-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.cert-card {
-    backdrop-filter: blur(15px);
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(29,185,84,0.3);
-    border-radius: 15px;
-    padding: 20px;
-    width: 220px;
+    width: 240px;
     text-align: center;
 }
-
-/* Buttons */
 
 button {
     background: #1db954;
@@ -187,11 +164,18 @@ button {
     background: rgba(0,0,0,0.9);
     justify-content: center;
     align-items: center;
+    z-index: 2000;
 }
 
-.modal iframe {
+.modal-content {
     width: 80%;
-    height: 85%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(29,185,84,0.4);
+    border-radius: 15px;
+    padding: 30px;
+    color: white;
 }
 
 .close {
@@ -199,5 +183,10 @@ button {
     top: 20px;
     right: 40px;
     font-size: 40px;
+    color: #1db954;
     cursor: pointer;
+}
+
+.close:hover {
+    color: white;
 }
