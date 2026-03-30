@@ -1,5 +1,5 @@
 // =====================
-// CUSTOM CURSOR
+// CUSTOM CURSOR (desktop)
 // =====================
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
@@ -30,6 +30,52 @@ document.querySelectorAll('a, button, .cert-card, .project-card').forEach(el => 
         ring.style.opacity = '0.5';
     });
 });
+
+// =====================
+// TOUCH TRAIL (mobile)
+// Spawns glowing green particles that follow finger movement
+// =====================
+const TRAIL_COLORS = ['#1db954', '#14843c', '#22e065', '#0fa844', '#5dfc9b'];
+let lastTrailTime = 0;
+
+function spawnParticle(x, y) {
+    const p = document.createElement('div');
+    p.className = 'touch-particle';
+    const size = 8 + Math.random() * 14;
+    const color = TRAIL_COLORS[Math.floor(Math.random() * TRAIL_COLORS.length)];
+    p.style.cssText = `
+        width:${size}px;
+        height:${size}px;
+        left:${x}px;
+        top:${y}px;
+        background:${color};
+        box-shadow: 0 0 ${size * 1.5}px ${color};
+    `;
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 700);
+}
+
+// Continuous trail while dragging
+document.addEventListener('touchmove', e => {
+    const now = Date.now();
+    if (now - lastTrailTime < 30) return; // throttle to ~30fps
+    lastTrailTime = now;
+    for (let t of e.touches) {
+        spawnParticle(t.clientX, t.clientY);
+    }
+}, { passive: true });
+
+// Burst of particles on tap/touch start
+document.addEventListener('touchstart', e => {
+    for (let t of e.touches) {
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => spawnParticle(
+                t.clientX + (Math.random() - 0.5) * 10,
+                t.clientY + (Math.random() - 0.5) * 10
+            ), i * 60);
+        }
+    }
+}, { passive: true });
 
 // =====================
 // SCROLL REVEAL
@@ -77,11 +123,32 @@ window.addEventListener('scroll', () => {
 
 // =====================
 // MODAL — CERTIFICATE
+// Shimmer loading animation + smooth scale-in
 // =====================
 function openModal(file) {
     document.getElementById('modalTitle').textContent = 'Certificate';
-    document.getElementById('modalContent').innerHTML =
-        `<iframe src="${file}" style="width:100%;height:75vh;border:none;border-radius:3px;"></iframe>`;
+
+    // Build iframe with shimmer loader
+    const loaderDiv = document.createElement('div');
+    loaderDiv.className = 'iframe-loader';
+    loaderDiv.innerHTML = `
+        <div class="modal-loading-text">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            Loading
+        </div>
+        <iframe src="${file}"></iframe>
+    `;
+
+    // Fade in iframe once loaded, hide shimmer
+    const iframe = loaderDiv.querySelector('iframe');
+    iframe.addEventListener('load', () => {
+        loaderDiv.classList.add('loaded');
+    });
+
+    document.getElementById('modalContent').innerHTML = '';
+    document.getElementById('modalContent').appendChild(loaderDiv);
     document.getElementById('modal').classList.add('open');
     document.body.style.overflow = 'hidden';
 }
@@ -98,10 +165,15 @@ function openProject(title, desc) {
 
 // =====================
 // MODAL — CLOSE
+// Waits for exit animation before clearing content
 // =====================
 function closeModal() {
-    document.getElementById('modal').classList.remove('open');
-    document.getElementById('modalContent').innerHTML = '';
+    const overlay = document.getElementById('modal');
+    overlay.classList.remove('open');
+    // Delay clearing content so exit animation finishes
+    setTimeout(() => {
+        document.getElementById('modalContent').innerHTML = '';
+    }, 400);
     document.body.style.overflow = '';
 }
 
