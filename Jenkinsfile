@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/karthikeya68/Personal_Info.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build --no-cache -t $IMAGE .'
