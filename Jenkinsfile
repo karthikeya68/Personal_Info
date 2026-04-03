@@ -1,11 +1,21 @@
 pipeline {
     agent any
 
+    environment {
+        IMAGE = "portfolio-app:${BUILD_NUMBER}"
+    }
+
     stages {
+
+        stage('Clone Code') {
+            steps {
+                git 'https://github.com/karthikeya68/Personal_Info.git'
+            }
+        }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t portfolio-app .'
+                sh 'docker build --no-cache -t $IMAGE .'
             }
         }
 
@@ -17,7 +27,18 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh 'docker run -d -p 80:80 --name portfolio-container portfolio-app'
+                sh '''
+                docker run -d -p 80:80 \
+                --name portfolio-container \
+                --restart always \
+                $IMAGE
+                '''
+            }
+        }
+
+        stage('Clean Old Images') {
+            steps {
+                sh 'docker image prune -f'
             }
         }
     }
