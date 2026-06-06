@@ -855,62 +855,55 @@ AWS Rekognition, Python, Machine Learning, Image Processing
 </div>
 
 <!-- PROJECT 4 -->
-<div class="project-card" onclick="openProject('AI Image Search Engine',`
-<b>Project Overview</b><br><br>
+<!-- PROJECT 4 -->
+<div class="project-card" onclick="openProject('AI Voice-Powered Photo Search Engine',`
+<b>Problem Statement</b><br><br>
 
-Developed an AI-powered image search engine using AWS cloud services.
-
-<br><br>
-
-<b>Why S3 is Required:</b><br>
-
-AWS services such as Rekognition and Lambda cannot directly access images stored
-on a user's mobile device. Amazon S3 acts as the cloud storage layer that enables
-AI processing and image indexing.
+Managing large personal photo collections is time-consuming because traditional file systems rely on filenames and folder structures, making it nearly impossible to locate images by their visual content. Users have no intuitive way to search for photos using natural language queries such as 'beach sunset' or 'pictures with my dog'. An intelligent system is needed to understand image content semantically and retrieve relevant photos through simple voice commands.
 
 <br><br>
 
-<b>Architecture:</b><br>
+<b>Solution</b><br><br>
 
-User Upload → Amazon S3 → AWS Lambda → Amazon Rekognition → DynamoDB → Search Results
+Developed an AI-powered semantic image search system that indexes local photo collections using Amazon Rekognition for image label extraction and Amazon Bedrock Titan Embeddings for converting visual descriptions into high-dimensional semantic vectors stored in a FAISS vector database.
+
+Users speak natural language queries that are transcribed using AWS Transcribe and converted into semantic embeddings using Titan Embeddings. FAISS performs nearest-neighbor similarity search to retrieve the most relevant photos. The system understands concepts such as coastlines, golden hour, beaches, or open water even when those exact keywords are not present.
+
+Results are automatically organized into numbered output folders with confidence scores, query reports, and searchable history logs for complete traceability.
 
 <br><br>
 
-<b>Features:</b><br>
+<b>Technologies Used</b><br><br>
 
-• Upload images from mobile or web application.<br>
-• Store images securely in Amazon S3.<br>
-• Trigger Lambda automatically on image upload.<br>
-• Generate image labels using Amazon Rekognition.<br>
-• Store searchable metadata in DynamoDB.<br>
-• Search images using natural language keywords.<br>
-• Fully scalable serverless architecture.<br><br>
+<b>AWS Services:</b><br>
+• Amazon Rekognition<br>
+• Amazon Bedrock Titan Embeddings<br>
+• AWS Transcribe<br>
+• AWS SDK (Boto3)<br><br>
 
-<b>Benefits:</b><br>
-
-• Centralized cloud storage.<br>
-• Real-time AI image analysis.<br>
-• Fast image retrieval.<br>
-• Supports large-scale image collections.<br><br>
-
-<b>Technologies Used:</b><br>
-Amazon S3, AWS Lambda, Amazon Rekognition, DynamoDB, Python
+<b>Supporting Libraries:</b><br>
+• FAISS Vector Search<br>
+• Pillow (PIL)<br>
+• NumPy<br>
+• SoundDevice<br>
+• Python
 `)">
 
-  <div class="project-num">Project — 04</div>
-  <div class="project-title">AI Image Search Engine</div>
+    <div class="project-num">Project — 04</div>
 
-  <div class="project-desc">
-    Serverless AI-powered image search platform using S3, Lambda,
-    Rekognition and DynamoDB for intelligent image retrieval.
-  </div>
+    <div class="project-title">
+        AI Voice-Powered Photo Search Engine
+    </div>
 
-  <div class="project-arrow">Read more →</div>
+    <div class="project-desc">
+        AI-powered semantic image search system using Amazon Rekognition,
+        Bedrock Titan Embeddings, AWS Transcribe, and FAISS to retrieve
+        relevant photos through natural language voice commands.
+    </div>
+
+    <div class="project-arrow">Read more →</div>
+
 </div>
-```
-
-  </div>
-</section>
 
 <!-- CERTIFICATES -->
 <section id="certificates" class="section">
